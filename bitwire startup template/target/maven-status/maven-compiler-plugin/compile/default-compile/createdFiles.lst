@@ -1,0 +1,9 @@
+ro\sci\BitwireApplication.class
+ro\sci\domain\AbstractModel.class
+ro\sci\domain\User.class
+ro\sci\dao\inmemory\ImBaseDao.class
+ro\sci\dao\BaseDao.class
+ro\sci\dao\inmemory\ImUserDao.class
+ro\sci\web\UserController.class
+ro\sci\service\UserService.class
+ro\sci\dao\UserDao.class

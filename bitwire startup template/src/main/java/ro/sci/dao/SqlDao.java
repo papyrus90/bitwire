@@ -1,0 +1,13 @@
+package ro.sci.dao;
+
+import javax.transaction.Transactional;
+
+import org.springframework.data.repository.CrudRepository;
+
+import ro.sci.domain.User;
+
+
+@Transactional
+public interface SqlDao extends CrudRepository<User, Long> {
+	public User findByEmail(String email);
+}
