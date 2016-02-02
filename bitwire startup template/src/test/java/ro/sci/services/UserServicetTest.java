@@ -34,7 +34,6 @@ public class UserServicetTest {
 		user.setEmail("popa");
 		user.setPassword("alex");
 		User savedUser = service.saveUser(user);
-		Assert.assertTrue(savedUser.getId()>0);
 		Assert.assertEquals("popa",savedUser.getEmail());
 		Assert.assertEquals("alex", savedUser.getPassword());
 	}
