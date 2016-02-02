@@ -30,8 +30,8 @@ public class User extends AbstractModel {
 	@NotNull
 	private String password;
 	
-	
-	/*private Date date;
+	@NotNull
+	private Date date;
 
 	public Date getDate() {
 		return date;
@@ -39,7 +39,7 @@ public class User extends AbstractModel {
 
 	public void setDate(Date date) {
 		this.date = date;
-	}*/
+	}
 
 	public User() {
 
@@ -86,10 +86,6 @@ public class User extends AbstractModel {
 
 	public void setPassword(String passwordHash) {
 		this.password = passwordHash;
-	}
-
-	public long getId() {
-		return id;
 	}
 
 

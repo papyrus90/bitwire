@@ -36,7 +36,7 @@ public class SqlDaoTest {
 		user.setLastName("ion");
 		user.setPassword("password");
 		User saved =  dao.save(user);
-		
+		Assert.assertTrue(saved.getId()>0);
 		Assert.assertEquals("popa",saved.getEmail());
 		Assert.assertEquals("password", saved.getPassword());
 		
