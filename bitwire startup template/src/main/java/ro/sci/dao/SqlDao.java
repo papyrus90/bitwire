@@ -9,5 +9,8 @@ import ro.sci.domain.User;
 
 @Transactional
 public interface SqlDao extends CrudRepository<User, Long> {
-	public User findByEmail(String email);
+	
+	public User findOneByEmail(String email);
+		
+	
 }

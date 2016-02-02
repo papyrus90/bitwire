@@ -19,10 +19,11 @@ public class CurentUserDetailsService implements UserDetailsService{
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		User user;
-		if (dao.findByEmail(email)!= null){
-		user = dao.findByEmail(email);
-		return new CurrentUser(user);
-		}else throw new UsernameNotFoundException(String.format("User with email=%s was not found"));
+		if (dao.findOneByEmail(email)!= null){
+			user = dao.findOneByEmail(email);
+			return new CurrentUser(user);
+		}
+			else throw new UsernameNotFoundException(String.format("User with email=%s was not found"));
 		
 	}
 }

@@ -19,18 +19,17 @@ public class loginController {
 	@Autowired
 	private SqlDao sql;
 	
-	@RequestMapping(value = "",method = RequestMethod.GET)
+	@RequestMapping(value = "")
 	public ModelAndView logIn(String email){
 		ModelAndView result = new ModelAndView("login");
 		User user = new User();
-		
-		result.addObject("user", user);
+		result.addObject("user",user);
 		return result;
 	}
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView getIn(User user){
 		ModelAndView view = congrats(user);
-		if (sql.findByEmail(user.getEmail()) != null){
+		if (sql.findOneByEmail(user.getEmail()) != null){
 			view.addObject("user", user);
 			return view;
 			}else
@@ -39,9 +38,16 @@ public class loginController {
 
 	@RequestMapping ("/user" )
 	public ModelAndView congrats(User user){	
-		ModelAndView view = new ModelAndView("users");
+		ModelAndView view = new ModelAndView("users","user",user);
 		return view;
 		
+	}
+	
+	@RequestMapping("/users")
+	public ModelAndView list(){
+		ModelAndView view = new ModelAndView("user_list");
+		view.addObject("users", sql.findAll());
+		return view;
 	}
 
 }

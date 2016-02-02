@@ -79,8 +79,8 @@ public class UserController {
 	  @RequestMapping("/delete")
 	  @ResponseBody
 	  public String delete(String email){
-		  if (sql.findByEmail(email)!= null){
-			  User user = sql.findByEmail(email);
+		  if (sql.findOneByEmail(email)!= null){
+			  User user = sql.findOneByEmail(email);
 			  sql.delete(user);
 			  return ("User with email " + email +  " succesfully deleted"); 
 		  }

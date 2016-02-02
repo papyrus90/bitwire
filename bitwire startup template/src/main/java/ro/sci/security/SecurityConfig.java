@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter  {
 	private UserDetailsService userDetailsService;
 	
 	protected void configure(HttpSecurity http)throws Exception{
-		http.authorizeRequests().antMatchers("/","/register","/login").permitAll().anyRequest()
+		http.authorizeRequests().antMatchers("/","/register","/login/**").permitAll().anyRequest()
 		.authenticated();
 		http
 			.formLogin().loginPage("/login").usernameParameter("email");
