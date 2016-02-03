@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+<title>Bitwire login</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+      <h1>Login to Bitwire</h1>
+       <div th:if="${param.logout}">
+            You have been logged out.
+        </div>
+       <form action = "/login/user" method = "post"> 
+        Email<input  name="email" th:value="${user.email}" ></input>
+        Password<input  name="password" th:value="${user.password}"  ></input>
+        <p> <input type="submit" value="Login"></input></p>
+        </form>
+          <p class="remember_me"></p>  
+            <input type="checkbox" name="remember_me" id="remember_me"></input>
+            Remember me on this computer
+       
+     
+	 <p>No account?  <a href="/register">Click here to register </a></p>
+      <p>Forgot your password? <a href="index.html">Click here to reset it</a></p>
+ </body>
+  
+
+</html>
