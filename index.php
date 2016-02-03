@@ -15,7 +15,7 @@
         <div class=row>
             <div class=upper-wrapper>
                 <div class=upper-main col-xs-12 col-sm-12 col-md-12 col-lg-12>
-                    <?php include 'header.php'; ?>
+                    <?php include 'header.php'; ?>  
                     <div class=upper-main-title>
                         <h1>The easiest way to share on social media</h1>
                         <p>Social media management for marketers and agencies</p>
@@ -23,6 +23,7 @@
                     <div class=upper-main-icon>
                         <img src="hand-tablet-icon.png">
                     </div>
+                    
                 </div>
             </div>    
             <div class=lower-main col-xs-12 col-sm-12 col-md-12 col-lg-12>
@@ -30,9 +31,9 @@
                     <h2>Join our network and enjoy all the benefits!</h2>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing Lorem ipsum dolor sit amet</p>
                 </div>
-                <div class=sign-up-button-wrapper>
+                <div class=sign-up-button-wrapper id="register_form">
                     <a href="#">
-                        <button class="btn btn-danger btn-danger-home btn-lg">Sign-up - It's free</button>
+                        <button class="btn btn-danger btn-danger-home btn-lg" id="register_form">Sign-up - It's free</button>
                     </a>
                 </div>
             </div>
@@ -40,5 +41,5 @@
                 <img src="images/bg-lower-signup.png">
             </div>    
         </div>
-
+        <?php include 'login.php'; ?>
     </body>
